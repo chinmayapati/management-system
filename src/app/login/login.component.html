@@ -1,0 +1,30 @@
+<div class="login-container">
+	<div class="login-parent-container">
+		<div class="login-child-container">
+			<div class="form-container">
+				<div class="university-title">
+					University Management System
+				</div>
+				<div class="form-title">
+					ACCOUNT LOGIN
+				</div>
+				<form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+					<div class="main-form">
+						<div class="input-container">
+							<input type="text" class="input-box" placeholder="User ID"  name="username" [(ngModel)]="model.username" #username="ngModel" required>
+							<div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+						</div>
+						<div class="input-container">
+							<input type="password" class="input-box" placeholder="Password" name="password" [(ngModel)]="model.password" #password="ngModel" required >
+							<div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+						</div>
+					</div>
+					<div class="submit-button-container">
+						<button type="submit" class="submit-button">SIGN IN</button>
+					</div>
+				</form>
+			</div>
+			<div class="side-image"></div>
+		</div>
+	</div>
+</div>
